@@ -9,12 +9,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { RoomPage } from '../pages/room/room';
+import { PlayerPage } from '../pages/player/player';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    RoomPage
+    RoomPage,
+    PlayerPage
   ],
   imports: [
     HttpClientModule,
@@ -25,7 +27,8 @@ import { RoomPage } from '../pages/room/room';
   entryComponents: [
     MyApp,
     HomePage,
-    RoomPage
+    RoomPage,
+    PlayerPage
   ],
   providers: [
     StatusBar,

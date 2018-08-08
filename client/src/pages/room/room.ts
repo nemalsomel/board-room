@@ -16,12 +16,12 @@ import { HttpClient } from '../../../node_modules/@angular/common/http';
 })
 export class RoomPage {
 
-  title: string = 'Creating room...';
+  room_name: string = 'Creating room...';
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public httpClient: HttpClient) {
     this.httpClient.get(`http://${location.hostname}:3000/new-room`).subscribe((data: any) => {
     console.log(data);
-    this.title = data.data;
+    this.room_name = data.data;
   })
   }
 

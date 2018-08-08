@@ -7,6 +7,21 @@
 </ion-header>
 
 <ion-content padding>
+
   <button ion-button (click)="newRoom()" icon-start>
-      <ion-icon  name="add"></ion-icon>Add new room</button>
+    <ion-icon  name="add"></ion-icon>Add new room
+  </button>
+
+  <ion-list>
+    <ion-item>
+      <ion-label floating>room-name</ion-label>
+      <ion-input  [(ngModel)]="room_name" type="text" value=""></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <button ion-button (click)="connectRoom()">Connect</button>
+    </ion-item>
+        
+  </ion-list>
+
 </ion-content>
