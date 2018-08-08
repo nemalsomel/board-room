@@ -7,14 +7,17 @@ app.use(cors());
 
 var rooms = ["kiscica1", "kiscica2"];
 
-app.get('/', (req, res) => res.send({message: "kiscica"}));
+app.get('/', (req, res) => res.send({message: "Server running..."}));
 
 app.get('/rooms', (req, res) => res.send({data: rooms}));
 
 app.get('/new-room', (req, res) => {
     var newRoom = randomWords({ exactly: 2, join: '-'});
     rooms.push(newRoom);
-    res.send({data: newRoom});
+    setTimeout(() => {
+        res.send({data: newRoom});
+    },1000)
+    //res.send({data: newRoom});
 })
 
 

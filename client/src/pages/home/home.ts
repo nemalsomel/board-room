@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 import { HttpClient } from '@angular/common/http';
+import { RoomPage } from '../room/room';
 
 @Component({
   selector: 'page-home',
@@ -13,8 +14,6 @@ export class HomePage {
   }
 
   newRoom() {
-    this.httpClient.get('http://localhost:3000/new-room').subscribe(data => {
-        console.log(data);
-      })
+    this.navCtrl.push(RoomPage);
   }
 }
