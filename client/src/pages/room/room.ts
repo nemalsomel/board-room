@@ -19,7 +19,7 @@ export class RoomPage {
   title: string = 'Creating room...';
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public httpClient: HttpClient) {
-    this.httpClient.get('http://localhost:3000/new-room').subscribe((data: any) => {
+    this.httpClient.get(`http://${location.hostname}:3000/new-room`).subscribe((data: any) => {
     console.log(data);
     this.title = data.data;
   })
