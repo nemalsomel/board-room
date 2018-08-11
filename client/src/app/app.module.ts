@@ -10,18 +10,20 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { RoomPage } from '../pages/room/room';
 import { PlayerPage } from '../pages/player/player';
+import { PlayerPageModule } from '../pages/player/player.module';
+import { RoomPageModule } from '../pages/room/room.module';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
-    RoomPage,
-    PlayerPage
+    HomePage
   ],
   imports: [
     HttpClientModule,
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    PlayerPageModule,
+    RoomPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

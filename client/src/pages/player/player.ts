@@ -8,23 +8,27 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
  * Ionic pages and navigation.
  */
 
-@IonicPage({ name: 'room_name', segment: 'room/:room_name' })
+@IonicPage({ 
+  name: 'plyersroom', 
+  segment: 'playersroom/:room_id',
+  defaultHistory: ["playersroom/:room_id"]
+ })
 @Component({
   selector: 'page-player',
   templateUrl: 'player.html',
 })
 export class PlayerPage {
 
-  room_name: string = '';
+  room_id: string = '';
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    console.log("Recieved: " + navParams.get('room_name'));
-    this.room_name = navParams.get('room_name');
-    console.log(this.room_name);
+    console.log("Recieved: " + navParams.get('room_id'));
+    this.room_id = navParams.get('room_id');
+    console.log(this.room_id);
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad PlayerPage');
+    // console.log('ionViewDidLoad PlayerPage');
   }
 
 }

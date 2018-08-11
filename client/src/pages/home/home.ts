@@ -23,6 +23,6 @@ export class HomePage {
 
   connectRoom(){
     console.log(this.room_name);
-    this.navCtrl.push(PlayerPage, {room_name: this.room_name});
+    this.navCtrl.push('plyersroom', {room_id: this.room_name});
   }
 }

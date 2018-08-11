@@ -6,6 +6,15 @@ var randomWords = require('random-words');
 app.use(cors());
 
 var rooms = ["kiscica1", "kiscica2"];
+var room_list = [
+    {room_name: "pink-unikornis", 
+    // player_type: 1,
+    // ? player_connected: 0 
+    player_max:2},
+    {room_name: "pink-unikornis", 
+    // player_type: 1, 
+    player_max:2},
+];
 
 app.get('/', (req, res) => res.send({message: "Server running..."}));
 
